@@ -4,7 +4,7 @@ async function acessar(endpoint) {
     // Impede acesso se não tiver token
     if (!token) {
         alert('Você precisa estar logado.');
-        window.location.href("./login.html");
+        window.location.href("./index.html");
     }
 
     const resp = await fetch(`http://localhost:3000${endpoint}`, {
@@ -21,5 +21,5 @@ async function acessar(endpoint) {
 
 function logout() {
     localStorage.removeItem("token");
-    window.location.href = "./login.html";
+    window.location.href = "./index.html";
 }
